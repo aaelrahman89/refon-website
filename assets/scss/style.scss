@@ -1,0 +1,242 @@
+@import "variable";
+
+$small: 768px;
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+body:lang(ar) {
+  font-family: 'Tajawal', sans-serif !important;
+}
+* {
+  box-sizing: border-box;
+}
+  *,*:focus,*:hover{
+    outline:none !important;
+}
+img {
+  object-fit: cover;
+  object-position: top;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+// .active-link,
+// .exact-active-link {
+//   color: #5ac9c6 !important;
+//   border-bottom: 3px solid #5ac9c6 !important;
+//   @media screen and (max-width: $small) {
+//     color: #ffcaf3 !important;
+//     border-bottom: 1px solid #fff !important;
+//    }
+// }
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.layout-container{
+  min-height: 500px;
+}
+
+.page-item.disabled .page-link {
+  border-radius: 0 !important;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter, .slide-fade-leave-to /* .slide-fade-leave-active below version 2.1.8 */
+ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+a {
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+.main-btn{
+  background-color: $mainColor !important;
+  color: #fff !important;
+  text-transform: capitalize;
+  border-radius: 0 !important;
+  &:hover{
+    color: #fff;
+    opacity: 0.9;
+    transition: all 0.7s ease-out;
+  }
+}
+.whiteborder-btn{
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  &:hover{
+    background-color: $mainColor;
+    border: 2px solid $mainColor !important;
+    transition: all 0.8s ease-out;
+  }
+}
+
+.text-main{
+  color: $mainColor !important;
+}
+
+.main-section{
+  padding: 25px 0 30px 0;
+}
+
+.main-btn-border{
+  border: 1px solid #ccc !important;
+  color: #999 !important;
+  border-radius: 0 !important;
+  font-size: 14px !important;
+  &:hover{
+    border: 1px solid $mainColor !important;
+  color: #fff !important;
+  background-color: $mainColor !important;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $mainColor;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $hoverColor;
+}
+
+.page-item.active .page-link {
+  background-color: $mainColor !important;
+  border-color: $mainColor !important;
+  color: #fff !important;
+}
+
+.image-popup{
+  background-color: #efefef;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  top: 0px;
+  text-align: center;
+  padding: 80px;
+  margin-right: 0px
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: $mainColor !important;
+  color: #fff !important;
+}
+.nav-pills .nav-link {
+  color: #000 !important;
+}
+.page-link {
+  color: #000 !important;
+}
+
+// menu item
+.menu-item{
+  h5{
+    font-size: 18px;
+    direction: ltr;
+  }
+  img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    &:hover{
+      transform: scale(0.95);
+      transition: all 0.9s ease-out;
+    }
+  }
+  a{
+    color: #000;
+    &:hover{
+      color: $mainColor;
+      transition: all 0.5s ease-out;
+      text-decoration: none !important;
+    }
+  }
+}
+.cursor-zoomin{
+  cursor: zoom-in;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.overflow-y-0{
+  overflow-y: hidden;
+}
+.table th, .table td {
+  text-align: center;
+}
+.bg-main{
+  background-color: $mainColor !important;
+  border: 1px solid $mainColor !important;
+}
+.badge{
+  padding: 0.5em !important;
+}
+
+.form-control{
+  border-radius: 0px !important;
+  font-size: 13px !important;
+  &::placeholder{
+    color: #a0a0a0 !important;
+  }
+}
+
+// Bounce Transition
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
